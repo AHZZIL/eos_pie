@@ -55,5 +55,8 @@ app.use(function(err, req, res, next) {
     });
 });
 
+http.createServer(app).listen(3000);
+console.log("EOS Express server listening on port 3000");
+
 
 module.exports = app;
