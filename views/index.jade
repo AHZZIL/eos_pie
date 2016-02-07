@@ -1,5 +1,178 @@
-extends layout
-
-block content
-  h1= title
-  p Welcome to #{title}
+doctype html
+html(lang='en')
+  head
+    link(rel='apple-touch-icon', sizes='57x57', href='.favicon/apple-icon-57x57.png')
+    link(rel='apple-touch-icon', sizes='60x60', href='.favicon/apple-icon-60x60.png')
+    link(rel='apple-touch-icon', sizes='72x72', href='.favicon/apple-icon-72x72.png')
+    link(rel='apple-touch-icon', sizes='76x76', href='.favicon/apple-icon-76x76.png')
+    link(rel='apple-touch-icon', sizes='114x114', href='.favicon/apple-icon-114x114.png')
+    link(rel='apple-touch-icon', sizes='120x120', href='.favicon/apple-icon-120x120.png')
+    link(rel='apple-touch-icon', sizes='144x144', href='.favicon/apple-icon-144x144.png')
+    link(rel='apple-touch-icon', sizes='152x152', href='.favicon/apple-icon-152x152.png')
+    link(rel='apple-touch-icon', sizes='180x180', href='.favicon/apple-icon-180x180.png')
+    link(rel='icon', type='image/png', sizes='192x192', href='.favicon/android-icon-192x192.png')
+    link(rel='icon', type='image/png', sizes='32x32', href='.favicon/favicon-32x32.png')
+    link(rel='icon', type='image/png', sizes='96x96', href='.favicon/favicon-96x96.png')
+    link(rel='icon', type='image/png', sizes='16x16', href='.favicon/favicon-16x16.png')
+    link(rel='manifest', href='/manifest.json')
+    meta(name='msapplication-TileColor', content='#ffffff')
+    meta(name='msapplication-TileImage', content='/ms-icon-144x144.png')
+    meta(name='theme-color', content='#ffffff')
+    meta(charset='utf-8')
+    title 한양대학교 EOS
+    style.
+      @keyframes rotate-opacity-e {
+      from {
+      opacity: 0;
+      visibility: hidden;
+      }
+      to {
+      opacity: 1;
+      visibility: visible;
+      transform: rotate(360deg);
+      }
+      }
+      @keyframes opacity-eyes {
+      from {
+      opacity: 0;
+      visibility: hidden;
+      }
+      to {
+      opacity: 1;
+      visibility: visible;
+      }
+      }
+      @keyframes translate-opacity-o {
+      from {
+      opacity: 0;
+      visibility: hidden;
+      }
+      to {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0%);
+      }
+      }
+      @keyframes rotate-opacity-translate-s {
+      from {
+      opacity: 0;
+      visibility: hidden;
+      }
+      to {
+      opacity: 1;
+      visibility: visible;
+      transform: rotate(1turn) translateX(0%);
+      }
+      }
+      @keyframes scale-opacity {
+      from {
+      opacity: 0;
+      visibility: hidden;
+      }
+      to {
+      opacity: 1;
+      visibility: visible;
+      transform: scale(1);
+      }
+      }
+      #eos-e
+      {
+      opacity: 0;
+      visibility: hidden;
+      animation: rotate-opacity-e 1s forwards;
+      transform-origin: center;
+      }
+      #eos-e-eyes
+      {
+      opacity: 0;
+      visibility: hidden;
+      animation: opacity-eyes 0.8s 0.5s forwards;
+      transform-origin: center;
+      }
+      #eos-o
+      {
+      transform: translateX(-100%);
+      opacity: 0;
+      visibility: hidden;
+      animation: translate-opacity-o 1s 0.5s forwards;
+      transform-origin: center;
+      }
+      #eos-s
+      {
+      transform: translateX(-100%);
+      opacity: 0;
+      visibility: hidden;
+      animation: rotate-opacity-translate-s 1s 1s forwards;
+      transform-origin: center;
+      }
+      #eos-uc{
+      transform: scale(2);
+      opacity: 0;
+      visibility: hidden;
+      animation: scale-opacity 1s 1.5s forwards;
+      transform-origin: center;
+      }
+  body
+    // Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)
+    a(href='http://hyu-eos.tistory.com/')
+      svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 1133.9 566.9', style='enable-background:new 0 0 1133.9 566.9;', xml:space='preserve')
+        style(type='text/css').
+          .st0{fill:#8FC31F;}
+          .st1{fill:url(#SVGID_1_);}
+          .st2{fill:#040000;}
+          .st3{fill:#F4D321;}
+          .st4{font-family:'JCHEadA';}
+          .st5{font-size:43.3232px;}
+          .st6{fill:#F5BB1D;}
+        g#eos-e
+          rect.st0(x='95.5', y='241.9', transform='matrix(0.866 -0.5 0.5 0.866 -101.6961 146.7624)', width='255.1', height='42.5')
+          path.st0(d='M361.4,232.4l-39.5,22.8c0.2,2.6,0.3,5.3,0.3,8c0,54.8-44.4,99.2-99.2,99.2c-54.8,0-99.2-44.4-99.2-99.2\
+          c0-20.3,6.1-39.2,16.6-54.9l-18.9-10.9c-1-0.6-1.4-1.9-0.8-2.9c0.6-1,1.9-1.4,2.9-0.8l19.2,11.1c16.8-23.1,43.4-38.6,73.7-40.6V140\
+          c0-1.2,1-2.1,2.1-2.1s2.1,1,2.1,2.1V164c0.7,0,1.5,0,2.2,0c44.3,0,81.8,29.1,94.6,69.2l37.4-21.6c-20.7-52.7-72-90.1-132-90.1\
+          c-78.3,0-141.7,63.5-141.7,141.7S144.7,404.9,223,404.9s141.7-63.5,141.7-141.7C364.7,252.6,363.6,242.3,361.4,232.4z')
+        g#eos-e-eyes
+          ellipse.st0(transform='matrix(0.866 -0.5 0.5 0.866 -99.0131 114.6551)', cx='164.4', cy='242.1', rx='7.1', ry='7.1')
+          ellipse.st0(transform='matrix(0.866 -0.5 0.5 0.866 -67.8865 145.7817)', cx='238.1', cy='199.6', rx='7.1', ry='7.1')
+        g#eos-o
+          path.st0(d='M506.5,121.4c-78.3,0-141.7,63.5-141.7,141.7s63.5,141.7,141.7,141.7c78.3,0,141.7-63.5,141.7-141.7\
+          S584.8,121.4,506.5,121.4z M506.5,362.4c-54.8,0-99.2-44.4-99.2-99.2s44.4-99.2,99.2-99.2c54.8,0,99.2,44.4,99.2,99.2\
+          S561.3,362.4,506.5,362.4z')
+        g#eos-s
+          rect.st0(x='662.4', y='241.9', transform='matrix(0.866 -0.5 0.5 0.866 -25.742 430.227)', width='255.1', height='42.5')
+          path.st0(d='M863.2,196.3c16.1,17.6,25.9,41.1,25.9,66.9c0,54.8-44.4,99.2-99.2,99.2c-20.9,0-40.4-6.5-56.4-17.6\
+          l-39.5,22.8c25.2,23.2,58.9,37.3,95.8,37.3c78.3,0,141.7-63.5,141.7-141.7c0-33.5-11.6-64.2-31-88.5L863.2,196.3z')
+          path.st0(d='M690.7,263.1c0-54.8,44.4-99.2,99.2-99.2c20.9,0,40.4,6.5,56.4,17.6l39.5-22.8c-25.2-23.2-58.9-37.3-95.8-37.3\
+          c-78.3,0-141.7,63.5-141.7,141.7c0,33.5,11.6,64.2,31,88.5l37.4-21.6C700.6,312.4,690.7,288.9,690.7,263.1z')
+        g#eos-uc
+          g
+            radialgradient#SVGID_1_(cx='893.5765', cy='405.1764', r='108.5778', gradienttransform='matrix(0.9893 -0.1457 0.1457 0.9893 -32.8348 70.8808)', gradientunits='userSpaceOnUse')
+              stop(offset='0', style='stop-color:#FFFFFF')
+              stop(offset='1', style='stop-color:#707070')
+            path.st1(d='M1021,411.3l-196.7,29c-15.4,2.3-29.9-8.5-32.2-23.9l-16.6-112.4c-2.3-15.4,8.5-29.9,23.9-32.2l196.7-29\
+            c15.4-2.3,29.9,8.5,32.2,23.9l16.6,112.4C1047.2,394.5,1036.4,409,1021,411.3z')
+            g
+              g
+                polygon.st2(points='931.3,252.3 858.8,435.2 830.8,439.3 903.3,256.4 				')
+                  polygon.st2(points='990.6,243.6 918.1,426.4 890.1,430.6 962.6,247.7 				')
+                    path.st2(d='M1025.6,410.6c7.1-2.4,13-7.3,16.7-13.5l3.7-9.4c0.8-3.5,0.9-7.3,0.4-11.1l-6.3-43l-31.5,79.5L1025.6,410.6\
+                    z')
+                    path.st2(d='M1017.7,249.3l-68.4,172.5l28-4.1l53.4-134.7l-2.2-14.7C1027.5,260.5,1023.4,253.9,1017.7,249.3z')
+                    path.st2(d='M872,261l-28,4.1L790,401.6l1.9,13.2c1.2,8,5.5,14.9,11.5,19.4L872,261z')
+                    path.st2(d='M812.8,269.8l-12.4,1.8c-9.2,1.4-16.9,6.6-21.8,13.8l-4.9,12.5c-0.5,3.2-0.6,6.4-0.1,9.8l6.6,44.5\
+                    L812.8,269.8z')
+              g
+                polygon.st2(points='931.3,252.3 858.8,435.2 830.8,439.3 903.3,256.4 				')
+                  polygon.st2(points='990.6,243.6 918.1,426.4 890.1,430.6 962.6,247.7 				')
+                    path.st2(d='M1025.6,410.6c7.1-2.4,13-7.3,16.7-13.5l3.7-9.4c0.8-3.5,0.9-7.3,0.4-11.1l-6.3-43l-31.5,79.5L1025.6,410.6\
+                    z')
+                    path.st2(d='M1017.7,249.3l-68.4,172.5l28-4.1l53.4-134.7l-2.2-14.7C1027.5,260.5,1023.4,253.9,1017.7,249.3z')
+                    path.st2(d='M872,261l-28,4.1L790,401.6l1.9,13.2c1.2,8,5.5,14.9,11.5,19.4L872,261z')
+                    path.st2(d='M812.8,269.8l-12.4,1.8c-9.2,1.4-16.9,6.6-21.8,13.8l-4.9,12.5c-0.5,3.2-0.6,6.4-0.1,9.8l6.6,44.5\
+                    L812.8,269.8z')
+            rect.st2(x='782.7', y='283', transform='matrix(0.9893 -0.1457 0.1457 0.9893 -40.0515 136.3049)', width='255', height='117')
+            text(transform='matrix(0.9893 -0.1457 0.1457 0.9893 860.9619 342.9261)')
+              tspan.st3.st4.st5(x='0', y='0') UNDER
+              tspan.st3.st4.st5(x='-63.5', y='42.3') CONSTRUCTION
+            path.st6(d='M1000.8,236.8l-207.4,30.6c-16.3,2.4-27.7,17.7-25.3,34l17.5,118.5c2.4,16.3,17.7,27.7,34,25.3l207.4-30.6\
+            c16.3-2.4,27.7-17.7,25.3-34l-17.5-118.5C1032.4,245.8,1017.1,234.4,1000.8,236.8z M1044.7,377.5c2.4,16.3-9,31.6-25.3,34\
+            L825.9,440c-16.3,2.4-31.6-9-34-25.3l-16.1-109.3c-2.4-16.3,9-31.6,25.3-34L994.6,243c16.3-2.4,31.6,9,34,25.3L1044.7,377.5z')
