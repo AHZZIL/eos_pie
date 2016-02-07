@@ -40,95 +40,203 @@ html(lang='en')
     title &#xD55C;&#xC591;&#xB300;&#xD559;&#xAD50; EOS
     |         
     style.
-      @keyframes rotate-opacity-e {
+      @-webkit-keyframes rotate-opacity-e {
       from {
       opacity: 0;
+      filter: alpha(opacity=0);
       visibility: hidden;
       }
       to {
       opacity: 1;
+      filter: alpha(opacity=100);
       visibility: visible;
+      -webkit-transform: rotate(360deg);
       transform: rotate(360deg);
+      }
+      }
+      @keyframes rotate-opacity-e {
+      from {
+      opacity: 0;
+      filter: alpha(opacity=0);
+      visibility: hidden;
+      }
+      to {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      visibility: visible;
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+      }
+      }
+      @-webkit-keyframes opacity-eyes {
+      from {
+      opacity: 0;
+      filter: alpha(opacity=0);
+      visibility: hidden;
+      }
+      to {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      visibility: visible;
       }
       }
       @keyframes opacity-eyes {
       from {
       opacity: 0;
+      filter: alpha(opacity=0);
       visibility: hidden;
       }
       to {
       opacity: 1;
+      filter: alpha(opacity=100);
       visibility: visible;
+      }
+      }
+      @-webkit-keyframes translate-opacity-o {
+      from {
+      opacity: 0;
+      filter: alpha(opacity=0);
+      visibility: hidden;
+      }
+      to {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      visibility: visible;
+      -webkit-transform: translateX(0%);
+      transform: translateX(0%);
       }
       }
       @keyframes translate-opacity-o {
       from {
       opacity: 0;
+      filter: alpha(opacity=0);
       visibility: hidden;
       }
       to {
       opacity: 1;
+      filter: alpha(opacity=100);
       visibility: visible;
+      -webkit-transform: translateX(0%);
       transform: translateX(0%);
+      }
+      }
+      @-webkit-keyframes rotate-opacity-translate-s {
+      from {
+      opacity: 0;
+      filter: alpha(opacity=0);
+      visibility: hidden;
+      }
+      to {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      visibility: visible;
+      -webkit-transform: rotate(360deg) translateX(0%);
+      transform: rotate(360deg) translateX(0%);
       }
       }
       @keyframes rotate-opacity-translate-s {
       from {
       opacity: 0;
+      filter: alpha(opacity=0);
       visibility: hidden;
       }
       to {
       opacity: 1;
+      filter: alpha(opacity=100);
       visibility: visible;
+      -webkit-transform: rotate(360deg) translateX(0%);
       transform: rotate(360deg) translateX(0%);
+      }
+      }
+      @-webkit-keyframes scale-opacity {
+      from {
+      opacity: 0;
+      filter: alpha(opacity=0);
+      visibility: hidden;
+      }
+      to {
+      opacity: 1;
+      filter: alpha(opacity=100);
+      visibility: visible;
+      -webkit-transform: scale(1);
+      transform: scale(1);
       }
       }
       @keyframes scale-opacity {
       from {
       opacity: 0;
+      filter: alpha(opacity=0);
       visibility: hidden;
       }
       to {
       opacity: 1;
+      filter: alpha(opacity=100);
       visibility: visible;
+      -webkit-transform: scale(1);
       transform: scale(1);
       }
       }
       #eos-e
       {
       opacity: 0;
+      filter: alpha(opacity=0);
       visibility: hidden;
+      -webkit-animation: rotate-opacity-e 1s forwards;
       animation: rotate-opacity-e 1s forwards;
+      -webkit-transform-origin: center;
+      -ms-transform-origin: center;
       transform-origin: center;
       }
       #eos-e-eyes
       {
       opacity: 0;
+      filter: alpha(opacity=0);
       visibility: hidden;
+      -webkit-animation: opacity-eyes 0.8s 0.5s forwards;
       animation: opacity-eyes 0.8s 0.5s forwards;
+      -webkit-transform-origin: center;
+      -ms-transform-origin: center;
       transform-origin: center;
       }
       #eos-o
       {
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
       transform: translateX(-100%);
       opacity: 0;
+      filter: alpha(opacity=0);
       visibility: hidden;
+      -webkit-animation: translate-opacity-o 1s 0.5s forwards;
       animation: translate-opacity-o 1s 0.5s forwards;
+      -webkit-transform-origin: center;
+      -ms-transform-origin: center;
       transform-origin: center;
       }
       #eos-s
       {
+      -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
       transform: translateX(-100%);
       opacity: 0;
+      filter: alpha(opacity=0);
       visibility: hidden;
+      -webkit-animation: rotate-opacity-translate-s 1s 1s forwards;
       animation: rotate-opacity-translate-s 1s 1s forwards;
+      -webkit-transform-origin: center;
+      -ms-transform-origin: center;
       transform-origin: center;
       }
       #eos-uc{
+      -webkit-transform: scale(2);
+      -ms-transform: scale(2);
       transform: scale(2);
       opacity: 0;
+      filter: alpha(opacity=0);
       visibility: hidden;
+      -webkit-animation: scale-opacity 1s 1.5s forwards;
       animation: scale-opacity 1s 1.5s forwards;
+      -webkit-transform-origin: center;
+      -ms-transform-origin: center;
       transform-origin: center;
       }
   |     
