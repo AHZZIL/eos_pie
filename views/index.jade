@@ -29,6 +29,10 @@ html(lang='en')
     |         
     link(rel='manifest', href='/manifest.json')
     |         
+    |         
+    link(href='bootstrap/css/bootstrap.css', rel='stylesheet')
+    |         
+    |         
     meta(name='msapplication-TileColor', content='#ffffff')
     |         
     meta(name='msapplication-TileImage', content='/ms-icon-144x144.png')
@@ -40,208 +44,146 @@ html(lang='en')
     title &#xD55C;&#xC591;&#xB300;&#xD559;&#xAD50; EOS
     |         
     style.
-      @-webkit-keyframes rotate-opacity-e {
-      from {
+      #eos-e, #eos-o, #eos-s, #eos-e-eyes, #eos-uc {
       opacity: 0;
       filter: alpha(opacity=0);
-      visibility: hidden;
+      -webkit-transform-origin: center;
+      -ms-transform-origin: center;
+      transform-origin: center;
+      }
+      @-webkit-keyframes opacity-1 {
+      from{
+      opacity: 0;
+      filter: alpha(opacity=0);
+      visibility: hidden
       }
       to {
       opacity: 1;
       filter: alpha(opacity=100);
-      visibility: visible;
-      -webkit-transform: rotate(360deg);
-      transform: rotate(360deg);
+      visibility: visible
       }
       }
-      @keyframes rotate-opacity-e {
-      from {
+      @keyframes opacity-1 {
+      from{
       opacity: 0;
       filter: alpha(opacity=0);
-      visibility: hidden;
+      visibility: hidden
       }
       to {
       opacity: 1;
       filter: alpha(opacity=100);
-      visibility: visible;
-      -webkit-transform: rotate(360deg);
-      transform: rotate(360deg);
+      visibility: visible
       }
       }
-      @-webkit-keyframes opacity-eyes {
-      from {
-      opacity: 0;
-      filter: alpha(opacity=0);
-      visibility: hidden;
+      @-webkit-keyframes translate-100 {
+      from{
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
       }
       to {
-      opacity: 1;
-      filter: alpha(opacity=100);
-      visibility: visible;
-      }
-      }
-      @keyframes opacity-eyes {
-      from {
-      opacity: 0;
-      filter: alpha(opacity=0);
-      visibility: hidden;
-      }
-      to {
-      opacity: 1;
-      filter: alpha(opacity=100);
-      visibility: visible;
-      }
-      }
-      @-webkit-keyframes translate-opacity-o {
-      from {
-      opacity: 0;
-      filter: alpha(opacity=0);
-      visibility: hidden;
-      }
-      to {
-      opacity: 1;
-      filter: alpha(opacity=100);
-      visibility: visible;
       -webkit-transform: translateX(0%);
       transform: translateX(0%);
       }
       }
-      @keyframes translate-opacity-o {
-      from {
-      opacity: 0;
-      filter: alpha(opacity=0);
-      visibility: hidden;
+      @keyframes translate-100 {
+      from{
+      -webkit-transform: translateX(-100%);
+      transform: translateX(-100%);
       }
       to {
-      opacity: 1;
-      filter: alpha(opacity=100);
-      visibility: visible;
       -webkit-transform: translateX(0%);
       transform: translateX(0%);
       }
       }
-      @-webkit-keyframes rotate-opacity-translate-s {
-      from {
-      opacity: 0;
-      filter: alpha(opacity=0);
-      visibility: hidden;
+      @-webkit-keyframes scale-1 {
+      from{
+      -webkit-transform: scale(2);
+      transform: scale(2);
       }
       to {
-      opacity: 1;
-      filter: alpha(opacity=100);
-      visibility: visible;
-      -webkit-transform: rotate(360deg) translateX(0%);
-      transform: rotate(360deg) translateX(0%);
-      }
-      }
-      @keyframes rotate-opacity-translate-s {
-      from {
-      opacity: 0;
-      filter: alpha(opacity=0);
-      visibility: hidden;
-      }
-      to {
-      opacity: 1;
-      filter: alpha(opacity=100);
-      visibility: visible;
-      -webkit-transform: rotate(360deg) translateX(0%);
-      transform: rotate(360deg) translateX(0%);
-      }
-      }
-      @-webkit-keyframes scale-opacity {
-      from {
-      opacity: 0;
-      filter: alpha(opacity=0);
-      visibility: hidden;
-      }
-      to {
-      opacity: 1;
-      filter: alpha(opacity=100);
-      visibility: visible;
       -webkit-transform: scale(1);
       transform: scale(1);
       }
       }
-      @keyframes scale-opacity {
-      from {
-      opacity: 0;
-      filter: alpha(opacity=0);
-      visibility: hidden;
+      @keyframes scale-1 {
+      from{
+      -webkit-transform: scale(2);
+      transform: scale(2);
       }
       to {
-      opacity: 1;
-      filter: alpha(opacity=100);
-      visibility: visible;
       -webkit-transform: scale(1);
       transform: scale(1);
       }
       }
-      #eos-e
-      {
-      opacity: 0;
-      filter: alpha(opacity=0);
-      visibility: hidden;
-      -webkit-animation: rotate-opacity-e 1s forwards;
-      animation: rotate-opacity-e 1s forwards;
-      -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-      transform-origin: center;
+      @-webkit-keyframes rotate-translate {
+      from {
+      -webkit-transform: translateX(-100%) rotate(0deg);
+      transform: translateX(-100%) rotate(0deg);
       }
-      #eos-e-eyes
-      {
-      opacity: 0;
-      filter: alpha(opacity=0);
-      visibility: hidden;
-      -webkit-animation: opacity-eyes 0.8s 0.5s forwards;
-      animation: opacity-eyes 0.8s 0.5s forwards;
-      -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-      transform-origin: center;
+      to {
+      -webkit-transform: translateX(0%) rotate(360deg);
+      transform: translateX(0%) rotate(360deg);
       }
-      #eos-o
-      {
-      -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-      transform: translateX(-100%);
-      opacity: 0;
-      filter: alpha(opacity=0);
-      visibility: hidden;
-      -webkit-animation: translate-opacity-o 1s 0.5s forwards;
-      animation: translate-opacity-o 1s 0.5s forwards;
-      -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-      transform-origin: center;
       }
-      #eos-s
-      {
-      -webkit-transform: translateX(-100%);
-      -ms-transform: translateX(-100%);
-      transform: translateX(-100%);
-      opacity: 0;
-      filter: alpha(opacity=0);
-      visibility: hidden;
-      -webkit-animation: rotate-opacity-translate-s 1s 1s forwards;
-      animation: rotate-opacity-translate-s 1s 1s forwards;
-      -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-      transform-origin: center;
+      @keyframes rotate-translate {
+      from {
+      -webkit-transform: translateX(-100%) rotate(0deg);
+      transform: translateX(-100%) rotate(0deg);
+      }
+      to {
+      -webkit-transform: translateX(0%) rotate(360deg);
+      transform: translateX(0%) rotate(360deg);
+      }
+      }
+      @-webkit-keyframes rotate-only {
+      from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      }
+      to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+      }
+      }
+      @keyframes rotate-only {
+      from {
+      -webkit-transform: rotate(0deg);
+      transform: rotate(0deg);
+      }
+      to {
+      -webkit-transform: rotate(360deg);
+      transform: rotate(360deg);
+      }
+      }
+      #eos-e{
+      -webkit-animation: rotate-only 1s,
+      opacity-1 1s forwards;
+      animation: rotate-only 1s,
+      opacity-1 1s forwards;
+      }
+      #eos-e-eyes{
+      -webkit-animation: opacity-1 0.8s 0.8s forwards;
+      animation: opacity-1 0.8s 0.8s forwards;
+      }
+      #eos-o{
+      -webkit-animation: opacity-1 1s 0.5s forwards, translate-100 1s 0.5s forwards;
+      animation: opacity-1 1s 0.5s forwards, translate-100 1s 0.5s forwards;
+      }
+      #eos-s{
+      -webkit-animation: rotate-translate 1s 1s,
+      opacity-1 1s 1s forwards;
+      animation: rotate-translate 1s 1s,
+      opacity-1 1s 1s forwards;
       }
       #eos-uc{
-      -webkit-transform: scale(2);
-      -ms-transform: scale(2);
-      transform: scale(2);
-      opacity: 0;
-      filter: alpha(opacity=0);
-      visibility: hidden;
-      -webkit-animation: scale-opacity 1s 1.5s forwards;
-      animation: scale-opacity 1s 1.5s forwards;
-      -webkit-transform-origin: center;
-      -ms-transform-origin: center;
-      transform-origin: center;
+      -webkit-animation: scale-1 0.5s 1.8s forwards,
+      opacity-1 0.5s 1.8s forwards;
+      animation: scale-1 0.5s 1.8s forwards,
+      opacity-1 0.5s 1.8s forwards;
       }
   |     
   body
-    a(href='http://hyu-eos.tistory.com/')
+    a.col-md-12(href='http://hyu-eos.tistory.com/')
       // Generator: Adobe Illustrator 19.2.1, SVG Export Plug-In . SVG Version: 6.00 Build 0)
       svg(version='1.1', xmlns='http://www.w3.org/2000/svg', xmlns:xlink='http://www.w3.org/1999/xlink', x='0px', y='0px', viewbox='0 0 1133.9 566.9', style='enable-background:new 0 0 1133.9 566.9;', xml:space='preserve')
         style(type='text/css').
@@ -398,3 +340,7 @@ html(lang='en')
             path.st4(d='M1000.8,236.8l-207.4,30.6c-16.3,2.4-27.7,17.7-25.3,34l17.5,118.5c2.4,16.3,17.7,27.7,34,25.3l207.4-30.6\
             c16.3-2.4,27.7-17.7,25.3-34l-17.5-118.5C1032.4,245.8,1017.1,234.4,1000.8,236.8z M1044.7,377.5c2.4,16.3-9,31.6-25.3,34\
             L825.9,440c-16.3,2.4-31.6-9-34-25.3l-16.1-109.3c-2.4-16.3,9-31.6,25.3-34L994.6,243c16.3-2.4,31.6,9,34,25.3L1044.7,377.5z')
+    |         
+    script(src='bootstrap/js/bootstrap.js')
+    |         
+    script(src='//code.jquery.com/jquery-1.12.0.min.js')
