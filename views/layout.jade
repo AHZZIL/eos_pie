@@ -19,22 +19,22 @@ html
   body
     ul#top_bar
       li(style='float: left')
-        img.toggle-button(type='image', src='/images/eos_logo.png')
+        img.toggle-button.hover-elem(type='image', origin='#ABF200', touched='#75BC00', src='/images/eos_logo.png')
       li(align='right', style='float: right')
         h3(style='width: 90px; height: 60px; line-height: 60px; text-align: center; vertical-align: middle; color: #FFFFFF') 로그인
     nav#menu.slideout-menu
       ul
         li
-          a.menu-list(href='http://hyu-eos.tistory.com/') EOS 블로그 바로가기
+          a.menu-list.hover-elem(href='http://hyu-eos.tistory.com/') EOS 블로그 바로가기
         li
-          a.menu-list(href='#my_profile')
-            span
-              img(src='/images/icon_my_profile.png', style='width: 30px; height: auto;')
+          a.menu-list.hover-elem(href='#my_profile')
+            span(style='display: inline-block; width: auto; height: 30px;')
+              img(src='/images/icon_my_profile.png', style='width: auto; height: 30px;')
             span.list-name.font-normal 내 정보 관리
         li
-          a.menu-list(href='#members')
-            span
-              img(src='/images/icon_members.png', style='width: 30px; height: auto;')
+          a.menu-list.hover-elem(href='#members')
+            span(style='display: inline-block; width: auto; height: 30px;')
+              img(src='/images/icon_members.png', style='width: auto; height: 30px;')
             span.list-name.font-normal 회원 정보 조회
     main#panel.slideout-panel
       block content
@@ -45,8 +45,19 @@ html
         padding: 256,
         tolerance: 70
       });
+      
+      $('.menu-list').attr('origin', '#FFFFFF');
+      $('.menu-list').attr('touched', '#EEEEEE');
 
       // Toggle button
       $('.toggle-button').click(function() {
         slideout.toggle();
+      });
+      
+      $('.hover-elem').bind('touchstart', function(e) {
+        $(this).css('background-color', $(this).attr('touched'));
+      });
+      
+      $('.hover-elem').bind('touchend', function(e) {
+        $(this).css('background-color', $(this).attr('origin'));
       });

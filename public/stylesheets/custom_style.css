@@ -52,29 +52,29 @@ html, body {
 
 .slideout-menu ul li {
   width: inherit;
+  height: 50px;
+}
+
+a.menu-list {
+  display: block;
+  width: inherit;
   height: 30px;
   padding: 10px;
   line-height: 30px;
   vertical-align: middle;
 }
 
-.slideout-menu ul li:hover {
+a.menu-list:hover {
   background-color: #EEEEEE;
 }
 
 span.list-name {
   display: inline-block;
+  top: 0px;
+  width: auto;
   height: 50px;
   margin-left: 15px;
-  line-height 50px;
-  vertical-align: middle;
-}
-
-a.menu-list {
-  display: block;
-  width: inherit;
-  height: inherit;
-  line-height 30px;
+  line-height: 30px;
   vertical-align: middle;
 }
 
