@@ -26,7 +26,8 @@ html, body {
 
 .slideout-panel {
   position:relative;
-  height: inherit;
+  height: auto;
+  min-height: 100%;
   margin-top: 60px;
   z-index: 1;
   background-color: #EEEEEE;
