@@ -1,7 +1,52 @@
 doctype html
 html
   head
-    title= title
+    // meta
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible", content="IE=edge")
+    meta(name="viewport", content="width=device-width, initial-scale=1")
+    // bring jquery file by googleapis
+    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js')
+    // bring slideout script
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/slideout/0.1.11/slideout.min.js')
+    // bring default style & bootstrap style
     link(rel='stylesheet', href='/stylesheets/style.css')
+    // bring custom style
+    link(rel='stylesheet', href='/stylesheets/custom_style.css')
+
+    title 한양대학교 EOS
+    block headScript
   body
-    block content
+    ul#top_bar
+      li(style='float: left')
+        img.toggle-button(type='image', src='/images/eos_logo.png')
+      li(align='right', style='float: right')
+        h3(style='width: 90px; height: 60px; line-height: 60px; text-align: center; vertical-align: middle; color: #FFFFFF') 로그인
+    nav#menu.slideout-menu
+      ul
+        li
+          a.menu-list(href='http://hyu-eos.tistory.com/') EOS 블로그 바로가기
+        li
+          a.menu-list(href='#my_profile')
+            span
+              img(src='/images/icon_my_profile.png', style='width: 30px; height: auto;')
+            span.list-name.font-normal 내 정보 관리
+        li
+          a.menu-list(href='#members')
+            span
+              img(src='/images/icon_members.png', style='width: 30px; height: auto;')
+            span.list-name.font-normal 회원 정보 조회
+    main#panel.slideout-panel
+      block content
+    script.
+      var slideout = new Slideout({
+        panel: document.getElementById('panel'),
+        menu: document.getElementById('menu'),
+        padding: 256,
+        tolerance: 70
+      });
+
+      // Toggle button
+      $('.toggle-button').click(function() {
+        slideout.toggle();
+      });
